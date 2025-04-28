@@ -39,7 +39,7 @@ body {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 6vh;
   font-weight: 700;
   color: var(--text-color);
   text-align: center;
@@ -50,11 +50,14 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  max-width: 65vh;
+  min-width: 65vh;
 }
 
 .form input[type="text"] {
   font-family: 'Work Sans', sans-serif;
-  width: 300px;
+  max-width: 53vh;
+  min-width: 53vh;
   padding: 10px;
   font-size: 20px;
   border: none;
@@ -81,12 +84,13 @@ h1 {
 
 .task-list {
   box-sizing: border-box;
-  max-width: 610px;
-  min-width: 610px;
+  max-width: 65vh;
+  min-width: 65vh;
+  margin: 0 auto;
 }
 
 .task {
-  margin: 20px 100px;
+  margin: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,6 +99,7 @@ h1 {
 .task label {
   flex-grow: 1;
   text-align: left;
+  text-align: justify;
   font-size: 20px;
   text-transform: lowercase;
 }
@@ -120,6 +125,7 @@ h1 {
 }
 
 .task .delete-button {
+  flex-shrink: 0;
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -173,8 +179,11 @@ h1 {
 
 .message-box {
   position: fixed;
-  top: 20px;
-  right: 70px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
   background-color: var(--background-color);
   color: var(--text-color);
   max-width: 300px;
