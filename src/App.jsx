@@ -39,24 +39,26 @@ function App() {
   return (
     <div>
       <button className='icon-theme-toggle' onClick={toggleTheme} />
-      <button className='icon-question-mark' onClick={toggleMessage}/>
+      <button className='icon-question-mark' onClick={toggleMessage} />
 
       {showMessage && <MessageBox onClose={toggleMessage} />}
 
       <h1>to-do list</h1>
-      <Form
-        handleSubmit={handleSubmit}
-        handleChange={handleChange}
-        inputValue={inputValue}
-      />
-      <div className="task-list">
-        {tasks.map((task, index) => (
-          <Task
-            key={index}
-            task={task}
-            handleDelete={() => handleDelete(index)}
-          />
-        ))}
+      <div className='main-container'>
+        <Form
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+          inputValue={inputValue}
+        />
+        <div className="task-list">
+          {tasks.map((task, index) => (
+            <Task
+              key={index}
+              task={task}
+              handleDelete={() => handleDelete(index)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

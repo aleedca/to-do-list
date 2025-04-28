@@ -45,24 +45,44 @@ h1 {
   text-align: center;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: flex-start; 
+  width: 90%; 
+  max-width: 600px;
+  min-width: 600px;
+  margin: 0 auto; 
+  padding: 20px; 
+  box-sizing: border-box; 
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    width: 95%; 
+    max-width: none;
+    min-width: auto;
+    padding: 15px; 
+  }
+}
+
 .form {
+  width: 100%;
+  height: 100%; 
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
-  max-width: 65vh;
-  min-width: 65vh;
 }
 
 .form input[type="text"] {
   font-family: 'Work Sans', sans-serif;
-  max-width: 53vh;
-  min-width: 53vh;
+  width: 100%;
   padding: 10px;
-  font-size: 20px;
+  font-size: 18px;
   border: none;
   border-bottom: 2px solid var(--general-color);
-  margin-right: 10px;
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -84,23 +104,24 @@ h1 {
 
 .task-list {
   box-sizing: border-box;
-  max-width: 65vh;
-  min-width: 65vh;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%; 
+  margin: 0 auto; 
 }
 
 .task {
-  margin: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-width: 300px; /* Tamaño mínimo para evitar que se reduzca demasiado */
+  max-width: 100%;
 }
 
 .task label {
   flex-grow: 1;
   text-align: left;
   text-align: justify;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: lowercase;
 }
 
@@ -186,7 +207,8 @@ h1 {
   justify-content: center;
   background-color: var(--background-color);
   color: var(--text-color);
-  max-width: 300px;
+  width: 100%;
+  max-width: 310px;
   padding: 20px;
   border: 1px solid var(--general-color);
   border-radius: 10px;
